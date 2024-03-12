@@ -2,7 +2,7 @@ import Postmonger from 'postmonger';
 import querystring from 'querystring';
 
 // Required environment variable
-const VUE_APP_URL = process.env.VUE_APP_URL.replace(/\/+$/, '');
+const VITE_APP_URL = import.meta.env.VITE_APP_URL.replace(/\/+$/, '');
 
 export default {
   components: { Postmonger },
@@ -188,17 +188,17 @@ export default {
             ...this.$store.state.jbActivity.arguments,
             execute: {
               ...this.$store.state.jbActivity.arguments.execute,
-              url: `${VUE_APP_URL}/execute?${tokenParams}`,
+              url: `${VITE_APP_URL}/execute?${tokenParams}`,
               inArguments: inArguments
             }
           },
           configurationArguments: {
             ...this.$store.state.jbActivity.configurationArguments,
             validate: {
-              url: `${VUE_APP_URL}/validate?${tokenParams}`
+              url: `${VITE_APP_URL}/validate?${tokenParams}`
             },
             publish: {
-              url: `${VUE_APP_URL}/publish?${tokenParams}`
+              url: `${VITE_APP_URL}/publish?${tokenParams}`
             }
           }
         });
