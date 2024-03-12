@@ -25,9 +25,9 @@
     "helmet": "^7.1.0",
     "postmonger": "^0.0.16",
     "querystring": "^0.2.1",
-    "vue": "^3.3.4",
+    "vue": "^3.4.15",
     "vue-logger-plugin": "^2.2.3",
-    "vue-router": "^4.2.4",
+    "vue-router": "^4.2.5",
     "vuex": "^4.1.0",
     "winston": "^3.10.0"
   },
