@@ -23,7 +23,8 @@ module.exports = async (req, res) => {
     }
 
     logger.debug(`[execute.js] mid: ${req.query.mid} | originalDefinitionId: ${req.body.originalDefinitionId} | activityObjectID: ${req.body.activityObjectID}`);
-
+    console.log(req);
+    
     statusCode = 200;
     jsonResult = 'Execution Success';
   } catch (error) {
