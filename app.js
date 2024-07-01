@@ -33,7 +33,7 @@ if (TREBLLE_PROJECT && TREBLLE_KEY) {
 
 // Configure server routes
 app.get('/config.json', require('./routes/config'));
-app.get('/config.js', require('./routes/config'));
+app.get('/config.js', require('./routes/config.js'));
 app.post('/validate', require('./routes/validate'));
 app.post('/publish', require('./routes/publish'));
 app.post('/execute', require('./routes/execute'));
