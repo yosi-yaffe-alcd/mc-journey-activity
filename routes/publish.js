@@ -5,7 +5,7 @@ module.exports = (req, res) => {
 
   try {
     logger.debug(`[publish.js] mid: ${req.query.mid} | originalDefinitionId: ${req.body.originalDefinitionId} | activityObjectID: ${req.body.activityObjectID}`);
-    console.log(req);
+    console.log(req.body);
     statusCode = 200;
     jsonResult = 'Publish Success';
   } catch (error) {
