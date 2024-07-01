@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
 
   try {
     if (!req.query.mid) throw('Invalid Request - Missing Required Parameters');
-
+    console.log('execute req body',req.body);
     const timestampUTC = new Date().toUTCString();
     const sfmcLogDE = sfmc.logDE(req.query.mid);
 
@@ -23,7 +23,6 @@ module.exports = async (req, res) => {
     }
 
     logger.debug(`[execute.js] mid: ${req.query.mid} | originalDefinitionId: ${req.body.originalDefinitionId} | activityObjectID: ${req.body.activityObjectID}`);
-    console.log(req.body);
 
     statusCode = 200;
     jsonResult = 'Execution Success';
